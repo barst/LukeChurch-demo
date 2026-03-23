@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>路加基督長老教會 Luke Church</title>
+    <meta
+      name="description"
+      content="路加基督長老教會官網原型，提供聚會資訊、首次來訪指引與本週週報入口。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand">
+            <img src="public/assets/bulletin-logo.jpg" alt="路加教會標誌" class="brand-mark" />
+            <div>
+              <p class="eyebrow">Luke Church</p>
+              <h1>路加基督長老教會</h1>
+            </div>
+          </div>
+          <a class="button button-ghost" href="weekly/">本週週報</a>
+        </nav>
+
+        <section class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">高雄在地教會官網原型</p>
+            <h2>先把每週主日最重要的入口做穩，再逐步長出完整官網。</h2>
+            <p class="lead">
+              第一階段以「掃描 QR Code 立即看本週週報」為核心。會友在椅背掃碼後，直接進入固定網址
+              <code>/weekly/</code>，不需要每週更換 QR Code。
+            </p>
+            <div class="action-row">
+              <a class="button" href="weekly/">立即查看本週週報</a>
+              <a class="button button-ghost" href="#mvp">查看第一階段規劃</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <img
+              src="public/assets/church-view.jpg"
+              alt="路加教會建築外觀"
+              class="hero-image"
+            />
+            <div class="hero-card-copy">
+              <p class="card-label">主日聚會資訊</p>
+              <p class="card-main">09:30 主日崇拜</p>
+              <p class="card-sub">11:10 靈命滋養小組時間</p>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="section" id="mvp">
+          <div class="section-heading">
+            <p class="eyebrow">第一階段落地目標</p>
+            <h2>先上線週報系統，再擴充成完整教會官網</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>固定 QR 入口</h3>
+              <p>椅背只貼一組 QR Code，永遠指向 <code>/weekly/</code>。每週更新內容，不重印碼。</p>
+            </article>
+            <article class="feature-card">
+              <h3>本週週報頁</h3>
+              <p>包含講題、經文、公告、服事資訊、奉獻提醒與聯絡方式，適合手機閱讀。</p>
+            </article>
+            <article class="feature-card">
+              <h3>官網形象首頁</h3>
+              <p>讓新朋友先看到教會介紹、聚會時間與本週聚會入口，建立一致的對外門面。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-contrast">
+          <div class="section-heading">
+            <p class="eyebrow">內容來源</p>
+            <h2>你已經有足夠素材，不需要重頭開始</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-index">01</span>
+              <div>
+                <h3>歷史週報</h3>
+                <p>已確認雲端內有多年週報檔案，可逐步匯入成歷史資料庫。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-index">02</span>
+              <div>
+                <h3>活動照片與教會主視覺</h3>
+                <p>可直接做首頁輪播、活動封面與週報視覺延伸。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-index">03</span>
+              <div>
+                <h3>社群同步</h3>
+                <p>Facebook、Instagram、YouTube 將作為官網內容的曝光出口，而不是分散維護的資料來源。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section qr-flow">
+          <div class="section-heading">
+            <p class="eyebrow">主日現場流程</p>
+            <h2>掃碼看週報的實際操作方式</h2>
+          </div>
+          <div class="flow-grid">
+            <article class="flow-card">
+              <span>1</span>
+              <h3>固定網址</h3>
+              <p>QR Code 指向官網固定頁 <code>/weekly/</code>。</p>
+            </article>
+            <article class="flow-card">
+              <span>2</span>
+              <h3>每週更新內容</h3>
+              <p>行政同工只要替換本週週報資料，不需要改 QR Code。</p>
+            </article>
+            <article class="flow-card">
+              <span>3</span>
+              <h3>手機直接閱讀</h3>
+              <p>會友開啟後即看到本週講題、經文與公告，不必先下載 PDF。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-contrast">
+          <div class="section-heading">
+            <p class="eyebrow">Demo Pages</p>
+            <h2>示意版已包含本週入口與歷史週報頁</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>本週週報</h3>
+              <p>固定入口頁，適合放在椅背 QR Code 與主日現場。</p>
+              <p><a class="button button-ghost" href="weekly/">開啟 `/weekly/`</a></p>
+            </article>
+            <article class="feature-card">
+              <h3>歷史週報頁</h3>
+              <p>示範每一期週報都保留日期頁，方便回查、分享與索引。</p>
+              <p><a class="button button-ghost" href="bulletins/2026-03-22.html">查看 2026-03-22</a></p>
+            </article>
+            <article class="feature-card">
+              <h3>歷史索引</h3>
+              <p>未來可由雲端硬碟中的 PDF 批次生成歷史週報清單。</p>
+              <p><a class="button button-ghost" href="bulletins/">開啟 `/bulletins/`</a></p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

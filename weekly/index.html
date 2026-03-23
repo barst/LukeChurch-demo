@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>本週週報 | 路加基督長老教會</title>
+    <meta
+      name="description"
+      content="路加基督長老教會本週週報，提供主日講題、經文、公告與聚會資訊。"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="bulletin-body">
+    <div class="page-shell page-shell-tight">
+      <header class="bulletin-header">
+        <a class="back-link" href="../index.html">返回首頁</a>
+        <p class="eyebrow">Weekly Bulletin</p>
+        <h1 id="bulletin-title">載入中...</h1>
+        <p id="bulletin-date" class="bulletin-date"></p>
+      </header>
+
+      <main class="bulletin-layout">
+        <section class="bulletin-primary">
+          <article class="bulletin-panel emphasis">
+            <p class="card-label">本週信息</p>
+            <h2 id="sermon-title"></h2>
+            <p id="sermon-scripture" class="sermon-scripture"></p>
+            <p id="sermon-summary" class="panel-text"></p>
+          </article>
+
+          <article class="bulletin-panel">
+            <div class="panel-head">
+              <h2>本週公告</h2>
+              <span class="panel-tag">手機版週報</span>
+            </div>
+            <div id="announcement-list" class="stack-list"></div>
+          </article>
+        </section>
+
+        <aside class="bulletin-sidebar">
+          <article class="bulletin-panel">
+            <h2>聚會資訊</h2>
+            <dl id="schedule-list" class="info-list"></dl>
+          </article>
+          <article class="bulletin-panel">
+            <h2>本週服事</h2>
+            <dl id="service-list" class="info-list"></dl>
+          </article>
+          <article class="bulletin-panel">
+            <h2>聯絡與奉獻</h2>
+            <p id="contact-text" class="panel-text"></p>
+          </article>
+        </aside>
+      </main>
+    </div>
+
+    <script src="../data/current-bulletin.js"></script>
+    <script src="../weekly/weekly.js"></script>
+  </body>
+</html>
