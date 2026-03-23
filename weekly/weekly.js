@@ -17,8 +17,24 @@
   setText("bulletin-date", bulletin.dateLabel);
   setText("sermon-title", bulletin.sermon.title);
   setText("sermon-scripture", bulletin.sermon.scripture);
-  setText("sermon-summary", bulletin.sermon.summary);
+  setText("leaders-text", bulletin.leadersText);
   setText("contact-text", bulletin.contact);
+
+  const liturgyList = document.getElementById("liturgy-list");
+  bulletin.liturgy.forEach((item, index) => {
+    const article = document.createElement("article");
+    article.className = "notice-item";
+    article.innerHTML =
+      "<p class=\"notice-index\">0" +
+      (index + 1) +
+      "</p>" +
+      "<div><h3>" +
+      item.step +
+      "</h3><p>" +
+      item.detail +
+      "</p></div>";
+    liturgyList.appendChild(article);
+  });
 
   const announcementList = document.getElementById("announcement-list");
   bulletin.announcements.forEach((item, index) => {
@@ -49,5 +65,6 @@
   };
 
   renderInfoList("schedule-list", bulletin.schedule);
-  renderInfoList("service-list", bulletin.serviceTeam);
+  renderInfoList("service-this-week", bulletin.serviceThisWeek);
+  renderInfoList("service-next-week", bulletin.serviceNextWeek);
 })();
