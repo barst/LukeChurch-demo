@@ -53,7 +53,7 @@ code {
 }
 
 .page-shell-tight {
-  width: min(1080px, calc(100% - 24px));
+  width: min(980px, calc(100% - 20px));
 }
 
 .hero {
@@ -292,7 +292,8 @@ h3 {
 }
 
 .bulletin-header {
-  padding: 28px 22px 16px;
+  padding: 22px 18px 10px;
+  text-align: center;
 }
 
 .back-link {
@@ -319,7 +320,7 @@ h3 {
 }
 
 .bulletin-panel {
-  padding: 24px;
+  padding: 18px;
   border-radius: var(--radius-md);
 }
 
@@ -333,17 +334,42 @@ h3 {
   font-weight: 700;
 }
 
-.stack-list {
+.stack-list,
+.liturgy-list {
   display: grid;
-  gap: 14px;
-  margin-top: 16px;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.liturgy-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.liturgy-item {
+  padding: 12px 10px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.liturgy-item:nth-child(-n + 2) {
+  border-top: 0;
+}
+
+.liturgy-step {
+  font-size: 1rem;
+}
+
+.liturgy-detail {
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .notice-item {
   display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 12px;
-  padding-top: 14px;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding-top: 12px;
   border-top: 1px solid var(--line);
 }
 
@@ -352,18 +378,11 @@ h3 {
   border-top: 0;
 }
 
-.notice-index {
-  margin: 0;
-  color: var(--accent);
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
 .info-list {
   display: grid;
   grid-template-columns: 112px 1fr;
-  row-gap: 10px;
-  margin: 14px 0 0;
+  row-gap: 8px;
+  margin: 10px 0 0;
 }
 
 .info-list dt {
@@ -386,7 +405,7 @@ h3 {
   .page-shell,
   .page-shell-tight {
     width: min(100% - 18px, 100%);
-    padding-top: 12px;
+    padding-top: 8px;
   }
 
   .hero,
@@ -409,6 +428,39 @@ h3 {
 
   .hero-copy {
     padding: 22px 18px;
+  }
+
+  .bulletin-header {
+    padding: 16px 8px 6px;
+  }
+
+  .bulletin-panel {
+    padding: 14px;
+  }
+
+  .liturgy-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .liturgy-item {
+    padding: 10px 6px;
+  }
+
+  .liturgy-item:nth-child(2) {
+    border-top: 1px solid var(--line);
+  }
+
+  .liturgy-step {
+    font-size: 0.98rem;
+  }
+
+  .liturgy-detail,
+  .notice-item p,
+  .panel-text,
+  .info-list dd {
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 
   .notice-item {
