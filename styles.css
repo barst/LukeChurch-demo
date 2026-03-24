@@ -429,6 +429,16 @@ h3 {
   background: linear-gradient(180deg, rgba(164, 90, 42, 0.12), rgba(255, 251, 246, 0.94));
 }
 
+.livestream-panel {
+  background: linear-gradient(180deg, rgba(111, 50, 16, 0.08), rgba(255, 251, 246, 0.94));
+}
+
+.livestream-status {
+  margin-top: 14px;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
 .sermon-scripture {
   margin-top: 8px;
   color: var(--accent-deep);
