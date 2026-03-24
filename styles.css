@@ -251,6 +251,51 @@ h3 {
   border-radius: var(--radius-md);
 }
 
+.archive-card {
+  min-width: 0;
+}
+
+.archive-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+.archive-label {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.archive-select {
+  min-width: 220px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(164, 90, 42, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.96);
+  color: var(--ink);
+  font: inherit;
+}
+
+.archive-year-list {
+  display: grid;
+  gap: 28px;
+}
+
+.archive-year-section {
+  padding-top: 6px;
+}
+
+.archive-year-head {
+  margin-bottom: 16px;
+}
+
+.archive-year-head h2 {
+  font-size: 1.65rem;
+}
+
 .activity-section {
   background:
     radial-gradient(circle at top right, rgba(164, 90, 42, 0.12), transparent 28%),

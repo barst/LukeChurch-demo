@@ -15,12 +15,44 @@
           <h1>歷史週報</h1>
           <p class="lead">每一期主日週報都保留日期頁，方便查詢、分享與後續直播、公告引用。</p>
         </div>
-        <div class="feature-grid">
-        <article class="feature-card">
+        <div class="archive-toolbar">
+          <label class="archive-label" for="year-select">年度總表</label>
+          <select id="year-select" class="archive-select" onchange="if (this.value) location.hash = this.value;">
+            <option value="#year-2026" selected>2026 年週報</option>
+          </select>
+        </div>
+        <div class="archive-year-list">
+        <section id="year-2026" class="archive-year-section">
+          <div class="archive-year-head">
+            <h2>2026 年</h2>
+            <p class="lead">目前已整理 4 份週報。</p>
+          </div>
+          <div class="feature-grid">
+        <article class="feature-card archive-card">
+          <p class="card-label">第 12 週</p>
           <h3>2026 年 3 月 22 日 主日禮拜</h3>
           <p>聖靈更新人的生命</p>
           <p><a class="button button-ghost" href="./2026-03-22.html">查看週報</a></p>
+        </article>
+        <article class="feature-card archive-card">
+          <p class="card-label">第 11 週</p>
+          <h3>2026 年 3 月 15 日 主日禮拜</h3>
+          <p>天國的筵席</p>
+          <p><a class="button button-ghost" href="./2026-03-15.html">查看週報</a></p>
+        </article>
+        <article class="feature-card archive-card">
+          <p class="card-label">第 10 週</p>
+          <h3>2026 年 3 月 8 日 主日禮拜</h3>
+          <p>天國八福的生命態度</p>
+          <p><a class="button button-ghost" href="./2026-03-08.html">查看週報</a></p>
+        </article>
+        <article class="feature-card archive-card">
+          <p class="card-label">第 9 週</p>
+          <h3>2026 年 3 月 1 日 主日禮拜</h3>
+          <p>你有代禱者的影響力</p>
+          <p><a class="button button-ghost" href="./2026-03-01.html">查看週報</a></p>
         </article></div>
+        </section></div>
       </header>
     </div>
   </body>
