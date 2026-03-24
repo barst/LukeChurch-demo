@@ -201,7 +201,7 @@ h3 {
 .bulletin-date,
 .panel-tag,
 .panel-text,
-.info-list dd,
+.info-value,
 .notice-item p {
   color: var(--muted);
 }
@@ -252,7 +252,7 @@ h3 {
 .flow-card p,
 .panel-text,
 .notice-item p,
-.info-list dd {
+.info-value {
   margin-top: 10px;
   line-height: 1.8;
 }
@@ -392,14 +392,33 @@ h3 {
 
 .info-list {
   display: grid;
-  grid-template-columns: 112px 1fr;
+  grid-template-columns: 1fr;
   row-gap: 8px;
   margin: 10px 0 0;
 }
 
-.info-list dt {
+.info-row {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding-top: 6px;
+  border-top: 1px solid rgba(72, 51, 31, 0.08);
+}
+
+.info-row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.info-term {
   color: var(--accent-deep);
   font-weight: 700;
+  flex: 0 0 auto;
+}
+
+.info-value {
+  margin: 0;
+  flex: 1 1 auto;
 }
 
 @media (max-width: 920px) {
@@ -470,16 +489,8 @@ h3 {
 
   .notice-item p,
   .panel-text,
-  .info-list dd {
+  .info-value {
     font-size: 0.95rem;
     line-height: 1.55;
-  }
-
-  .notice-item {
-    grid-template-columns: 1fr;
-  }
-
-  .info-list {
-    grid-template-columns: 1fr;
   }
 }
