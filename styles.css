@@ -111,7 +111,6 @@ h3 {
 .site-nav-links,
 .hero-stage,
 .action-row,
-.hero-pill-row,
 .hero-marquee,
 .section-heading,
 .split-heading,
@@ -130,13 +129,13 @@ h3 {
 .site-nav {
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 22px;
+  padding: 4px 4px 12px;
 }
 
 .site-brand,
 .site-nav-links,
-.site-nav-links a,
-.hero-pill-row span {
+.site-nav-links a {
   display: inline-flex;
   align-items: center;
 }
@@ -161,9 +160,10 @@ h3 {
 }
 
 .site-nav-links {
-  gap: 18px;
+  gap: 22px;
   flex-wrap: wrap;
   justify-content: center;
+  flex: 1;
 }
 
 .site-nav-links a {
@@ -233,21 +233,6 @@ h3 {
   background: transparent;
   color: var(--accent-deep);
   border-color: rgba(157, 83, 29, 0.28);
-}
-
-.hero-pill-row {
-  gap: 10px;
-  margin-top: 24px;
-  flex-wrap: wrap;
-}
-
-.hero-pill-row span {
-  min-height: 38px;
-  padding: 0 14px;
-  border-radius: 999px;
-  background: rgba(255, 246, 225, 0.95);
-  border: 1px solid rgba(157, 83, 29, 0.14);
-  color: var(--accent-deep);
 }
 
 .hero-visual-card {
@@ -377,149 +362,16 @@ h3 {
 
 .vision-stage {
   margin-top: 24px;
-  padding: 16px;
+  overflow: hidden;
   border-radius: var(--radius-xl);
   background: linear-gradient(180deg, rgba(255, 252, 245, 0.94), rgba(244, 223, 183, 0.78));
   border: 1px solid rgba(157, 83, 29, 0.12);
 }
 
-.vision-svg {
+.vision-image {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.vision-title {
-  fill: #6d390f;
-  font-size: 72px;
-  font-weight: 700;
-}
-
-.vision-subtitle {
-  fill: #43260f;
-  font-size: 34px;
-  font-weight: 700;
-}
-
-.vision-banner-main,
-.vision-banner-sub {
-  fill: #45250d;
-  font-weight: 700;
-}
-
-.vision-banner-main {
-  font-size: 42px;
-}
-
-.vision-banner-sub {
-  font-size: 38px;
-}
-
-.vision-scripture-title {
-  fill: #6d390f;
-  font-size: 34px;
-  font-weight: 700;
-}
-
-.vision-scripture-line {
-  fill: #2e2015;
-  font-size: 28px;
-}
-
-.practice circle {
-  stroke: rgba(255, 255, 255, 0.6);
-  stroke-width: 8;
-  filter: drop-shadow(0 12px 18px rgba(60, 31, 10, 0.22));
-}
-
-.practice text {
-  fill: #fffaf3;
-  font-size: 42px;
-  font-weight: 700;
-}
-
-.practice-1 circle {
-  fill: #a83e24;
-}
-
-.practice-2 circle {
-  fill: #245ca8;
-}
-
-.practice-3 circle {
-  fill: #2d8e47;
-}
-
-.practice-4 circle {
-  fill: #d07e12;
-}
-
-.practice-5 circle {
-  fill: #7443a5;
-}
-
-.vision-star {
-  fill: url(#visionGlow);
-  animation: twinkle 3s ease-in-out infinite;
-}
-
-.vision-star-delay {
-  animation-delay: 1s;
-}
-
-.vision-star-delay-2 {
-  animation-delay: 1.8s;
-}
-
-.vision-ray {
-  fill: none;
-  stroke: rgba(255, 248, 214, 0.78);
-  stroke-width: 14;
-  stroke-linecap: round;
-  animation: rayGlow 3.6s ease-in-out infinite;
-}
-
-.vision-ray-delay {
-  animation-delay: 0.8s;
-}
-
-.vision-ray-delay-2 {
-  animation-delay: 1.4s;
-}
-
-.vision-ray-delay-3 {
-  animation-delay: 2.1s;
-}
-
-.vision-banner,
-.vision-scripture,
-.practice {
-  transform-origin: center;
-  animation: riseFade 1.2s ease both;
-}
-
-.vision-scripture {
-  animation-delay: 0.5s;
-}
-
-.practice-1 {
-  animation-delay: 0.8s;
-}
-
-.practice-2 {
-  animation-delay: 1s;
-}
-
-.practice-3 {
-  animation-delay: 1.2s;
-}
-
-.practice-4 {
-  animation-delay: 1.4s;
-}
-
-.practice-5 {
-  animation-delay: 1.6s;
 }
 
 .media-grid {
@@ -843,12 +695,7 @@ h3 {
     gap: 6px;
   }
 
-  .vision-stage {
-    padding: 10px;
-  }
-
-  .hero-marquee span,
-  .hero-pill-row span {
+  .hero-marquee span {
     font-size: 0.86rem;
   }
 }
