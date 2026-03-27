@@ -562,6 +562,11 @@ h3 {
   gap: 4px 14px;
 }
 
+.info-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+}
+
 .service-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -570,6 +575,16 @@ h3 {
 .service-term {
   color: var(--accent-deep);
   font-weight: 700;
+}
+
+.info-term {
+  margin-right: 10px;
+}
+
+.info-value {
+  margin-top: 0;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .livestream-panel {
@@ -744,6 +759,15 @@ h3 {
 
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .info-value {
+    text-align: left;
   }
 
   .liturgy-item {
