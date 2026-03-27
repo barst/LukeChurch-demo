@@ -578,6 +578,65 @@ h3 {
     var(--paper);
 }
 
+.livestream-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(157, 83, 29, 0.18);
+  background: #1d140f;
+  color: #fff9f1;
+}
+
+.livestream-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.livestream-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.68));
+  pointer-events: none;
+}
+
+.livestream-card-badge,
+.livestream-card-copy {
+  position: absolute;
+  z-index: 1;
+}
+
+.livestream-card-badge {
+  top: 16px;
+  left: 16px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(179, 27, 27, 0.92);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.livestream-card-copy {
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  display: grid;
+  gap: 4px;
+}
+
+.livestream-card-copy strong {
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.livestream-card-copy span {
+  color: rgba(255, 247, 236, 0.9);
+  line-height: 1.55;
+}
+
 .bulletin-action-row {
   margin-top: 18px;
 }
