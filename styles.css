@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
 
 :root {
-  --bg: #efebe3;
-  --bg-deep: #d7d0c2;
-  --paper: rgba(250, 247, 241, 0.96);
-  --paper-strong: #fffdf9;
-  --ink: #181512;
-  --muted: #5e5448;
-  --accent: #7f2f1c;
-  --accent-deep: #43160e;
-  --gold: #b78a43;
-  --line: rgba(24, 21, 18, 0.14);
-  --shadow: 0 18px 40px rgba(24, 21, 18, 0.06);
+  --bg: #ebe4da;
+  --bg-deep: #cfc4b4;
+  --paper: rgba(255, 252, 247, 0.98);
+  --paper-strong: #ffffff;
+  --ink: #0f0d0b;
+  --muted: #43392f;
+  --accent: #6d2414;
+  --accent-deep: #2e0f09;
+  --gold: #9c6f2f;
+  --line: rgba(15, 13, 11, 0.18);
+  --shadow: 0 18px 40px rgba(15, 13, 11, 0.08);
   --radius-xl: 18px;
   --radius-lg: 10px;
   --radius-md: 6px;
@@ -33,7 +33,7 @@ body {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.12)),
     linear-gradient(90deg, rgba(127, 47, 28, 0.03) 0, rgba(127, 47, 28, 0.03) 1px, transparent 1px, transparent 32px),
-    linear-gradient(180deg, #f3efe8 0%, #ebe5dc 100%);
+    linear-gradient(180deg, #eee8df 0%, #e5ddd1 100%);
 }
 
 img {
@@ -138,7 +138,7 @@ h3 {
   justify-content: space-between;
   gap: 22px;
   padding: 4px 0 18px;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
 }
 
 .site-brand,
@@ -181,6 +181,13 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 700;
+}
+
+.site-nav-links a:hover,
+.site-nav-links a:focus-visible,
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--accent);
 }
 
 .eyebrow {
@@ -245,7 +252,7 @@ h3 {
 }
 
 .button-ghost {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.72);
   color: var(--accent-deep);
   border-color: var(--ink);
 }
@@ -302,8 +309,8 @@ h3 {
   gap: 0;
   margin-top: 20px;
   flex-wrap: wrap;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
 }
 
 .hero-marquee span {
@@ -321,12 +328,12 @@ h3 {
   margin-top: 28px;
   padding: 38px 28px;
   border-radius: 0;
-  border-top: 4px solid var(--ink);
+  border-top: 5px solid var(--ink);
 }
 
 .section-contrast {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.28));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(246, 240, 232, 0.94));
 }
 
 .section-heading {
@@ -381,6 +388,14 @@ h3 {
 .service-value {
   margin-top: 10px;
   line-height: 1.82;
+}
+
+.feature-card,
+.bulletin-panel,
+.flow-card,
+.timeline-item,
+.section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 242, 234, 0.96));
 }
 
 .vision-stage {
@@ -472,7 +487,7 @@ h3 {
 .bulletin-header {
   padding: 12px 0 18px;
   text-align: left;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
 }
 
 .bulletin-header h1 {
@@ -520,8 +535,8 @@ h3 {
 }
 
 .emphasis {
-  border-left: 6px solid var(--accent);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(248, 242, 233, 0.9));
+  border-left: 8px solid var(--accent);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(246, 235, 224, 0.98));
 }
 
 .panel-head {
@@ -535,7 +550,7 @@ h3 {
   padding: 7px 11px;
   border-radius: 0;
   border: 1px solid var(--line);
-  background: rgba(127, 47, 28, 0.05);
+  background: rgba(109, 36, 20, 0.09);
   font-size: 0.77rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -561,7 +576,7 @@ h3 {
   padding: 18px;
   border-radius: 0;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.54);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .verse-card h3 {
@@ -576,7 +591,7 @@ h3 {
   padding: 16px 18px;
   border-left: 4px solid rgba(127, 47, 28, 0.75);
   border-radius: 0;
-  background: rgba(255, 255, 255, 0.54);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--accent-deep);
   font-weight: 700;
   line-height: 1.85;
@@ -631,6 +646,7 @@ h3 {
 
 .notice-item h3 {
   font-size: 1.05rem;
+  color: var(--accent-deep);
 }
 
 .info-list,
@@ -672,8 +688,8 @@ h3 {
 
 .livestream-panel {
   background:
-    linear-gradient(135deg, rgba(127, 47, 28, 0.10), transparent 40%),
-    var(--paper);
+    linear-gradient(135deg, rgba(109, 36, 20, 0.16), rgba(255, 255, 255, 0) 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 238, 228, 0.98));
 }
 
 .livestream-stack {
@@ -693,6 +709,12 @@ h3 {
   padding: 0;
   text-align: left;
   cursor: pointer;
+}
+
+.livestream-card:hover,
+.livestream-card:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(15, 13, 11, 0.24);
 }
 
 .livestream-thumb {
@@ -738,6 +760,7 @@ h3 {
 .livestream-card-copy strong {
   font-size: 1.15rem;
   line-height: 1.35;
+  color: #fffdf8;
 }
 
 .livestream-card-copy span {
