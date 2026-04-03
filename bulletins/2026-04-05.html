@@ -70,20 +70,27 @@
               <h2>主日直播</h2>
               <span class="panel-tag">影音連結</span>
             </div>
+            <div class="livestream-stack">
             <button
-            class="livestream-card livestream-embed-trigger"
-            type="button"
-            data-youtube-embed="https://www.youtube-nocookie.com/embed/L7CTiigKpdQ?autoplay=1&rel=0"
-            aria-label="2026 年 4 月 5 日 主日禮拜 主日直播播放器"
-          >
-            <img class="livestream-thumb" src="https://i.ytimg.com/vi/L7CTiigKpdQ/hqdefault_live.jpg" alt="2026 年 4 月 5 日 主日禮拜 主日直播縮圖" />
-            <span class="livestream-card-badge">LIVE</span>
-            <span class="livestream-play-badge">點擊播放</span>
-            <div class="livestream-card-copy">
-              <strong>在此直接播放主日直播</strong>
-              <span>耶穌指定你去的山頂</span>
+              class="livestream-card livestream-embed-trigger"
+              type="button"
+              data-youtube-embed="https://www.youtube-nocookie.com/embed/rhlxMatftCA?autoplay=1&playsinline=1&rel=0"
+              data-live-url="https://www.youtube.com/watch?v=rhlxMatftCA"
+              aria-label="2026 年 4 月 5 日 主日禮拜 主日直播播放器"
+            >
+              <img class="livestream-thumb" src="https://i.ytimg.com/vi/rhlxMatftCA/hqdefault_live.jpg" alt="2026 年 4 月 5 日 主日禮拜 主日直播縮圖" />
+              <span class="livestream-card-badge">LIVE</span>
+              <span class="livestream-play-badge">點擊播放</span>
+              <div class="livestream-card-copy">
+                <strong>在此直接播放主日直播</strong>
+                <span>耶穌指定你去的山頂</span>
+              </div>
+            </button>
+            <div class="action-row bulletin-action-row livestream-actions">
+              <button class="button button-ghost livestream-fullscreen-button" type="button" disabled>全螢幕播放</button>
+              <a class="button button-ghost" href="https://www.youtube.com/watch?v=rhlxMatftCA" target="_blank" rel="noreferrer">到 YouTube 觀看</a>
             </div>
-          </button>
+          </div>
           </article>
 
           <article class="bulletin-panel">
@@ -313,6 +320,22 @@
       document.addEventListener("click", function (event) {
         const trigger = event.target.closest(".livestream-embed-trigger");
         if (!trigger) {
+          const fullscreenButton = event.target.closest(".livestream-fullscreen-button");
+          if (!fullscreenButton) {
+            return;
+          }
+
+          const stack = fullscreenButton.closest(".livestream-stack");
+          const shell = stack ? stack.querySelector(".livestream-player-shell") : null;
+          if (!shell) {
+            return;
+          }
+
+          if (shell.requestFullscreen) {
+            shell.requestFullscreen();
+          } else if (shell.webkitRequestFullscreen) {
+            shell.webkitRequestFullscreen();
+          }
           return;
         }
 
@@ -327,12 +350,21 @@
         frame.title = "路加教會主日直播";
         frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
         frame.allowFullscreen = true;
+        frame.setAttribute("allowfullscreen", "");
+        frame.setAttribute("webkitallowfullscreen", "");
+        frame.setAttribute("mozallowfullscreen", "");
         frame.referrerPolicy = "strict-origin-when-cross-origin";
 
         const wrapper = document.createElement("div");
         wrapper.className = "livestream-player-shell";
         wrapper.appendChild(frame);
         trigger.replaceWith(wrapper);
+
+        const stack = wrapper.closest(".livestream-stack");
+        const fullscreenButton = stack ? stack.querySelector(".livestream-fullscreen-button") : null;
+        if (fullscreenButton) {
+          fullscreenButton.disabled = false;
+        }
       });
     </script>
   </body>

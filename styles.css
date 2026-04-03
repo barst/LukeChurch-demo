@@ -644,6 +644,11 @@ h3 {
     var(--paper);
 }
 
+.livestream-stack {
+  display: grid;
+  gap: 14px;
+}
+
 .livestream-card {
   position: relative;
   display: block;
@@ -731,6 +736,15 @@ h3 {
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
+}
+
+.livestream-actions {
+  margin-top: 0;
+}
+
+.livestream-fullscreen-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .bulletin-action-row {
