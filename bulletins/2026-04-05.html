@@ -70,14 +70,20 @@
               <h2>主日直播</h2>
               <span class="panel-tag">影音連結</span>
             </div>
-            <a class="livestream-card" href="https://www.youtube.com/watch?v=L7CTiigKpdQ" target="_blank" rel="noreferrer">
-            <img class="livestream-thumb" src="../output/thumbnails/2026-04-05.png" alt="2026 年 4 月 5 日 主日禮拜 主日直播縮圖" />
+            <button
+            class="livestream-card livestream-embed-trigger"
+            type="button"
+            data-youtube-embed="https://www.youtube-nocookie.com/embed/L7CTiigKpdQ?autoplay=1&rel=0"
+            aria-label="2026 年 4 月 5 日 主日禮拜 主日直播播放器"
+          >
+            <img class="livestream-thumb" src="https://i.ytimg.com/vi/L7CTiigKpdQ/hqdefault_live.jpg" alt="2026 年 4 月 5 日 主日禮拜 主日直播縮圖" />
             <span class="livestream-card-badge">LIVE</span>
+            <span class="livestream-play-badge">點擊播放</span>
             <div class="livestream-card-copy">
-              <strong>直接進入主日直播</strong>
+              <strong>在此直接播放主日直播</strong>
               <span>耶穌指定你去的山頂</span>
             </div>
-          </a>
+          </button>
           </article>
 
           <article class="bulletin-panel">
@@ -303,5 +309,31 @@
         </aside>
       </main>
     </div>
+    <script>
+      document.addEventListener("click", function (event) {
+        const trigger = event.target.closest(".livestream-embed-trigger");
+        if (!trigger) {
+          return;
+        }
+
+        const embedUrl = trigger.dataset.youtubeEmbed;
+        if (!embedUrl) {
+          return;
+        }
+
+        const frame = document.createElement("iframe");
+        frame.className = "livestream-player";
+        frame.src = embedUrl;
+        frame.title = "路加教會主日直播";
+        frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        frame.allowFullscreen = true;
+        frame.referrerPolicy = "strict-origin-when-cross-origin";
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "livestream-player-shell";
+        wrapper.appendChild(frame);
+        trigger.replaceWith(wrapper);
+      });
+    </script>
   </body>
 </html>

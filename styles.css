@@ -652,6 +652,10 @@ h3 {
   border: 1px solid rgba(157, 83, 29, 0.18);
   background: #1d140f;
   color: #fff9f1;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
 }
 
 .livestream-thumb {
@@ -669,7 +673,8 @@ h3 {
 }
 
 .livestream-card-badge,
-.livestream-card-copy {
+.livestream-card-copy,
+.livestream-play-badge {
   position: absolute;
   z-index: 1;
 }
@@ -701,6 +706,31 @@ h3 {
 .livestream-card-copy span {
   color: rgba(255, 247, 236, 0.9);
   line-height: 1.55;
+}
+
+.livestream-play-badge {
+  top: 16px;
+  right: 16px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 248, 236, 0.92);
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.livestream-player-shell {
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(157, 83, 29, 0.18);
+  background: #140d08;
+}
+
+.livestream-player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
 }
 
 .bulletin-action-row {
