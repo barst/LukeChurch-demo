@@ -14,9 +14,51 @@
     <div class="page-shell page-shell-tight">
       <header class="bulletin-header">
         <a class="back-link" href="../index.html">返回首頁</a>
-        <p class="eyebrow">Historical Bulletin</p>
-        <h1>2026 年 3 月 29 日 主日禮拜</h1>
-        <p class="bulletin-date">2026 年 3 月 29 日 主日禮拜｜第 13 週</p>
+        <div class="bulletin-hero">
+          <div class="bulletin-hero-copy">
+            <p class="eyebrow">Historical Bulletin</p>
+            <h1>2026 年 3 月 29 日 主日禮拜</h1>
+            <p class="bulletin-date">2026 年 3 月 29 日 主日禮拜｜第 13 週</p>
+            <p class="bulletin-lead">本週主日以「耶穌於橄欖山講道」為信息主軸，邀請會眾從敬拜、信息、代禱與團契中一同進入主的帶領。</p>
+            <div class="bulletin-meta-pills">
+        <span class="bulletin-meta-pill">
+          <strong>主禮</strong>
+          <span>趙學智牧師</span>
+        </span>
+        <span class="bulletin-meta-pill">
+          <strong>司禮</strong>
+          <span>曾綉惠長老</span>
+        </span>
+        <span class="bulletin-meta-pill">
+          <strong>司琴</strong>
+          <span>吳育嫺同學</span>
+        </span></div>
+          </div>
+          <article class="bulletin-hero-card">
+            <p class="card-label">主日信息摘要</p>
+            <h2>耶穌於橄欖山講道</h2>
+            <p class="sermon-scripture">經文：馬太福音 25:13、 21、 29-31</p>
+            <p class="panel-text">主禮： 趙學智牧師｜司禮： 曾綉惠長老｜司琴： 吳育嫺同學</p>
+            <p class="bulletin-hero-note">耶穌於橄欖山講道｜馬太福音 25:13、 21、 29-31</p>
+          </article>
+        </div>
+        <div class="bulletin-summary-strip">
+        <article class="bulletin-summary-card">
+          <p class="bulletin-summary-label">主日程序</p>
+          <p class="bulletin-summary-value">17 項</p>
+        </article>
+        <article class="bulletin-summary-card">
+          <p class="bulletin-summary-label">本會消息</p>
+          <p class="bulletin-summary-value">9 則</p>
+        </article>
+        <article class="bulletin-summary-card">
+          <p class="bulletin-summary-label">公禱事項</p>
+          <p class="bulletin-summary-value">2 項</p>
+        </article>
+        <article class="bulletin-summary-card">
+          <p class="bulletin-summary-label">主日直播</p>
+          <p class="bulletin-summary-value">公開待播</p>
+        </article></div>
       </header>
 
       <main class="bulletin-layout">
@@ -70,14 +112,27 @@
               <h2>主日直播</h2>
               <span class="panel-tag">影音連結</span>
             </div>
-            <a class="livestream-card" href="https://www.youtube.com/watch?v=jMjMQUrUSwc" target="_blank" rel="noreferrer">
-            <img class="livestream-thumb" src="../output/thumbnails/2026-03-29.png" alt="2026 年 3 月 29 日 主日禮拜 主日直播縮圖" />
-            <span class="livestream-card-badge">LIVE</span>
-            <div class="livestream-card-copy">
-              <strong>直接進入主日直播</strong>
-              <span>耶穌於橄欖山講道</span>
+            <div class="livestream-stack">
+            <button
+              class="livestream-card livestream-embed-trigger"
+              type="button"
+              data-youtube-embed="https://www.youtube-nocookie.com/embed/jMjMQUrUSwc?autoplay=1&playsinline=1&rel=0"
+              data-live-url="https://www.youtube.com/watch?v=jMjMQUrUSwc"
+              aria-label="2026 年 3 月 29 日 主日禮拜 主日直播播放器"
+            >
+              <img class="livestream-thumb" src="https://i.ytimg.com/vi/jMjMQUrUSwc/hqdefault_live.jpg" alt="2026 年 3 月 29 日 主日禮拜 主日直播縮圖" />
+              <span class="livestream-card-badge">LIVE</span>
+              <span class="livestream-play-badge">點擊播放</span>
+              <div class="livestream-card-copy">
+                <strong>在此直接播放主日直播</strong>
+                <span>耶穌於橄欖山講道</span>
+              </div>
+            </button>
+            <div class="action-row bulletin-action-row livestream-actions">
+              <button class="button button-ghost livestream-fullscreen-button" type="button" disabled>全螢幕播放</button>
+              <a class="button button-ghost" href="https://www.youtube.com/watch?v=jMjMQUrUSwc" target="_blank" rel="noreferrer">到 YouTube 觀看</a>
             </div>
-          </a>
+          </div>
           </article>
 
           <article class="bulletin-panel">
@@ -303,5 +358,56 @@
         </aside>
       </main>
     </div>
+    <script>
+      document.addEventListener("click", function (event) {
+        const trigger = event.target.closest(".livestream-embed-trigger");
+        if (!trigger) {
+          const fullscreenButton = event.target.closest(".livestream-fullscreen-button");
+          if (!fullscreenButton) {
+            return;
+          }
+
+          const stack = fullscreenButton.closest(".livestream-stack");
+          const shell = stack ? stack.querySelector(".livestream-player-shell") : null;
+          if (!shell) {
+            return;
+          }
+
+          if (shell.requestFullscreen) {
+            shell.requestFullscreen();
+          } else if (shell.webkitRequestFullscreen) {
+            shell.webkitRequestFullscreen();
+          }
+          return;
+        }
+
+        const embedUrl = trigger.dataset.youtubeEmbed;
+        if (!embedUrl) {
+          return;
+        }
+
+        const frame = document.createElement("iframe");
+        frame.className = "livestream-player";
+        frame.src = embedUrl;
+        frame.title = "路加教會主日直播";
+        frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        frame.allowFullscreen = true;
+        frame.setAttribute("allowfullscreen", "");
+        frame.setAttribute("webkitallowfullscreen", "");
+        frame.setAttribute("mozallowfullscreen", "");
+        frame.referrerPolicy = "strict-origin-when-cross-origin";
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "livestream-player-shell";
+        wrapper.appendChild(frame);
+        trigger.replaceWith(wrapper);
+
+        const stack = wrapper.closest(".livestream-stack");
+        const fullscreenButton = stack ? stack.querySelector(".livestream-fullscreen-button") : null;
+        if (fullscreenButton) {
+          fullscreenButton.disabled = false;
+        }
+      });
+    </script>
   </body>
 </html>

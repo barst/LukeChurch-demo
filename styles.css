@@ -482,22 +482,146 @@ h3 {
 
 .bulletin-body {
   min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(137, 85, 46, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.35)),
+    linear-gradient(180deg, #f4ede3 0%, #e9dfd1 100%);
 }
 
 .bulletin-header {
-  padding: 12px 0 18px;
+  position: relative;
+  padding: 18px 0 24px;
   text-align: left;
-  border-bottom: 3px solid var(--ink);
+  border-bottom: 1px solid rgba(46, 15, 9, 0.18);
+}
+
+.bulletin-header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-deep), rgba(156, 111, 47, 0.35) 58%, transparent);
 }
 
 .bulletin-header h1 {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0;
-  font-size: clamp(2.6rem, 4vw, 4.8rem);
+  font-size: clamp(2.8rem, 5vw, 5.6rem);
+  line-height: 0.96;
 }
 
 .bulletin-header .bulletin-date {
+  margin-top: 10px;
+}
+
+.bulletin-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.bulletin-hero-copy {
+  padding: 18px 0 0;
+}
+
+.bulletin-lead {
+  max-width: 760px;
+  margin-top: 18px;
+  color: #564636;
+  font-size: clamp(1.04rem, 1.2vw, 1.16rem);
+  line-height: 1.9;
+}
+
+.bulletin-meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.bulletin-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(46, 15, 9, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 252, 247, 0.9);
+  color: #473828;
+  box-shadow: 0 10px 20px rgba(15, 13, 11, 0.05);
+}
+
+.bulletin-meta-pill strong {
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bulletin-hero-card {
+  position: relative;
+  overflow: hidden;
+  padding: 26px;
+  border: 1px solid rgba(46, 15, 9, 0.14);
+  border-radius: 22px;
+  background:
+    linear-gradient(160deg, rgba(109, 36, 20, 0.12), transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 241, 233, 0.98));
+  box-shadow: 0 22px 40px rgba(39, 24, 14, 0.1);
+}
+
+.bulletin-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--accent), var(--gold));
+}
+
+.bulletin-hero-card h2 {
+  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+}
+
+.bulletin-hero-note {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(46, 15, 9, 0.12);
+  color: #6a5643;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.bulletin-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.bulletin-summary-card {
+  padding: 18px 20px;
+  border: 1px solid rgba(46, 15, 9, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 252, 248, 0.84);
+  box-shadow: 0 14px 28px rgba(15, 13, 11, 0.04);
+}
+
+.bulletin-summary-label {
+  color: #705a46;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bulletin-summary-value {
   margin-top: 8px;
+  color: var(--accent-deep);
+  font-family: "Fraunces", "Noto Serif TC", serif;
+  font-size: clamp(1.2rem, 1.5vw, 1.55rem);
+  line-height: 1.2;
 }
 
 .back-link {
@@ -513,44 +637,68 @@ h3 {
 .bulletin-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
-  gap: 22px;
+  gap: 24px;
   align-items: flex-start;
-  margin-top: 18px;
+  margin-top: 24px;
 }
 
 .bulletin-primary {
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
 
 .bulletin-sidebar {
   display: grid;
   gap: 18px;
   align-content: start;
+  position: sticky;
+  top: 20px;
 }
 
 .bulletin-panel {
-  padding: 22px;
-  border-radius: 0;
+  padding: 24px;
+  border-radius: 22px;
+  border: 1px solid rgba(46, 15, 9, 0.09);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 245, 238, 0.96));
+  box-shadow: 0 20px 32px rgba(25, 21, 18, 0.06);
 }
 
 .emphasis {
-  border-left: 8px solid var(--accent);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(246, 235, 224, 0.98));
+  border-left: 0;
+  background:
+    radial-gradient(circle at top right, rgba(178, 130, 78, 0.14), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(246, 235, 224, 0.98));
+  box-shadow: 0 24px 36px rgba(59, 36, 18, 0.08);
+}
+
+.bulletin-primary > .bulletin-panel:not(.emphasis) {
+  position: relative;
+}
+
+.bulletin-primary > .bulletin-panel:not(.emphasis)::before,
+.bulletin-sidebar > .bulletin-panel::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 42px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), rgba(156, 111, 47, 0.25));
 }
 
 .panel-head {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .panel-tag {
   padding: 7px 11px;
-  border-radius: 0;
-  border: 1px solid var(--line);
-  background: rgba(109, 36, 20, 0.09);
+  border-radius: 999px;
+  border: 1px solid rgba(46, 15, 9, 0.12);
+  background: rgba(109, 36, 20, 0.07);
   font-size: 0.77rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -559,6 +707,7 @@ h3 {
 .sermon-scripture {
   margin-top: 10px;
   font-weight: 700;
+  color: #5d4a37;
 }
 
 .verse-reference,
@@ -574,8 +723,8 @@ h3 {
 
 .verse-card {
   padding: 18px;
-  border-radius: 0;
-  border: 1px solid var(--line);
+  border-radius: 18px;
+  border: 1px solid rgba(46, 15, 9, 0.08);
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -600,12 +749,17 @@ h3 {
 .liturgy-list,
 .stack-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
+}
+
+.liturgy-list {
+  counter-reset: liturgy;
 }
 
 .liturgy-item {
-  padding: 14px 0;
-  border-top: 1px solid var(--line);
+  position: relative;
+  padding: 16px 0 16px 58px;
+  border-top: 1px solid rgba(46, 15, 9, 0.08);
 }
 
 .liturgy-item:first-child {
@@ -613,11 +767,33 @@ h3 {
   border-top: 0;
 }
 
+.liturgy-item::before {
+  counter-increment: liturgy;
+  content: counter(liturgy, decimal-leading-zero);
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(109, 36, 20, 0.08);
+  color: var(--accent-deep);
+  font-family: "Fraunces", "Noto Serif TC", serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.liturgy-item:first-child::before {
+  top: 0;
+}
+
 .liturgy-line {
   display: grid;
-  grid-template-columns: 158px minmax(0, 1fr);
+  grid-template-columns: 140px minmax(0, 1fr);
   align-items: start;
-  gap: 18px;
+  gap: 20px;
   text-align: left;
 }
 
@@ -635,17 +811,24 @@ h3 {
 }
 
 .notice-item {
-  padding: 16px 0;
-  border-top: 1px solid var(--line);
+  padding: 18px 18px 18px 20px;
+  border-top: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(46, 15, 9, 0.08);
+  box-shadow: inset 4px 0 0 rgba(109, 36, 20, 0.18);
 }
 
 .notice-item:first-child {
   padding-top: 0;
-  border-top: 0;
+}
+
+.stack-list .notice-item:first-child {
+  padding-top: 18px;
 }
 
 .notice-item h3 {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--accent-deep);
 }
 
@@ -659,6 +842,10 @@ h3 {
 .service-row {
   display: grid;
   gap: 4px 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(46, 15, 9, 0.08);
 }
 
 .info-row {
@@ -688,6 +875,7 @@ h3 {
 
 .livestream-panel {
   background:
+    radial-gradient(circle at top right, rgba(209, 57, 57, 0.16), transparent 24%),
     linear-gradient(135deg, rgba(109, 36, 20, 0.16), rgba(255, 255, 255, 0) 42%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 238, 228, 0.98));
 }
@@ -701,7 +889,7 @@ h3 {
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 18px;
   border: 1px solid rgba(157, 83, 29, 0.18);
   background: #1d140f;
   color: #fff9f1;
@@ -781,7 +969,7 @@ h3 {
 
 .livestream-player-shell {
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 18px;
   border: 1px solid rgba(157, 83, 29, 0.18);
   background: #140d08;
 }
@@ -853,12 +1041,17 @@ h3 {
   }
 
   .hero-stage,
-  .bulletin-layout {
+  .bulletin-layout,
+  .bulletin-hero {
     grid-template-columns: 1fr;
   }
 
   .site-nav {
     align-items: stretch;
+  }
+
+  .bulletin-sidebar {
+    position: static;
   }
 
   .site-nav-links {
@@ -879,6 +1072,10 @@ h3 {
   .liturgy-line {
     grid-template-columns: 132px minmax(0, 1fr);
     gap: 14px;
+  }
+
+  .bulletin-summary-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -916,6 +1113,19 @@ h3 {
     padding: 18px;
   }
 
+  .bulletin-summary-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .bulletin-meta-pills {
+    gap: 8px;
+  }
+
+  .bulletin-meta-pill {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .service-grid {
     grid-template-columns: 1fr;
   }
@@ -934,13 +1144,20 @@ h3 {
   }
 
   .liturgy-item {
-    padding: 12px 0;
+    padding: 12px 0 12px 48px;
   }
 
   .liturgy-line {
     grid-template-columns: 1fr;
     gap: 6px;
     text-align: center;
+  }
+
+  .liturgy-item::before {
+    width: 34px;
+    height: 34px;
+    top: 10px;
+    font-size: 0.8rem;
   }
 
   .hero-marquee span {
