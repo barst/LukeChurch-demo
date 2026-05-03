@@ -572,6 +572,7 @@ h3 {
 
 .bulletin-summary-card {
   display: block;
+  position: relative;
   padding: 18px 20px;
   border: 1px solid rgba(46, 15, 9, 0.1);
   border-radius: 18px;
@@ -589,6 +590,17 @@ h3 {
   box-shadow: 0 16px 30px rgba(56, 29, 12, 0.1);
 }
 
+.bulletin-summary-card::after {
+  content: "›";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(86, 70, 54, 0.56);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
 .bulletin-summary-label {
   color: #705a46;
   font-size: 0.84rem;
@@ -602,13 +614,6 @@ h3 {
   font-family: "Fraunces", "Noto Serif TC", serif;
   font-size: clamp(1.2rem, 1.5vw, 1.55rem);
   line-height: 1.2;
-}
-
-.bulletin-summary-jump {
-  margin-top: 10px;
-  color: #7d674f;
-  font-size: 0.84rem;
-  letter-spacing: 0.08em;
 }
 
 .back-link {
@@ -1122,33 +1127,21 @@ h3 {
 
   .bulletin-summary-card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 4px 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
     align-items: center;
-  }
-
-  .bulletin-summary-label,
-  .bulletin-summary-value,
-  .bulletin-summary-jump {
-    margin: 0;
+    min-height: 0;
+    padding: 14px 38px 14px 14px;
   }
 
   .bulletin-summary-label,
   .bulletin-summary-value {
-    grid-column: 1 / 2;
+    margin: 0;
   }
 
-  .bulletin-summary-jump {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-    align-self: center;
-    justify-self: end;
-    padding: 8px 10px;
-    border: 1px solid rgba(137, 85, 46, 0.18);
-    background: rgba(255, 255, 255, 0.72);
-    color: var(--accent-deep);
-    font-size: 0.78rem;
-    white-space: nowrap;
+  .bulletin-summary-card::after {
+    right: 14px;
+    font-size: 1.05rem;
   }
 
   .bulletin-meta-pills {
