@@ -565,7 +565,7 @@ h3 {
 
 .bulletin-summary-strip {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin-top: 18px;
 }
@@ -744,7 +744,7 @@ h3 {
 
 .liturgy-item {
   position: relative;
-  padding: 16px 0 16px 58px;
+  padding: 12px 0 12px 58px;
   border-top: 1px solid rgba(46, 15, 9, 0.08);
 }
 
@@ -778,8 +778,8 @@ h3 {
 .liturgy-line {
   display: grid;
   grid-template-columns: 140px minmax(0, 1fr);
-  align-items: start;
-  gap: 20px;
+  align-items: baseline;
+  gap: 12px;
   text-align: left;
 }
 
@@ -793,7 +793,8 @@ h3 {
   color: #5c4b37;
   font-size: clamp(1rem, 1.1vw, 1.1rem);
   font-weight: 600;
-  line-height: 1.7;
+  line-height: 1.45;
+  text-align: right;
 }
 
 .notice-item {
@@ -840,13 +841,30 @@ h3 {
 }
 
 .service-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .info-term,
 .service-term {
   color: var(--accent-deep);
   font-weight: 700;
+}
+
+.service-row {
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 8px 12px;
+  padding: 10px 12px;
+}
+
+.service-term {
+  white-space: nowrap;
+}
+
+.service-value {
+  margin-top: 0;
+  text-align: right;
+  line-height: 1.45;
 }
 
 .info-term {
@@ -1099,7 +1117,7 @@ h3 {
   }
 
   .bulletin-summary-strip {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .bulletin-summary-card {
@@ -1142,10 +1160,6 @@ h3 {
     justify-content: space-between;
   }
 
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
   .verse-grid {
     grid-template-columns: 1fr;
   }
@@ -1164,9 +1178,9 @@ h3 {
   }
 
   .liturgy-line {
-    grid-template-columns: 1fr;
-    gap: 6px;
-    text-align: center;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 8px;
+    text-align: left;
   }
 
   .liturgy-item::before {
@@ -1174,6 +1188,11 @@ h3 {
     height: 34px;
     top: 10px;
     font-size: 0.8rem;
+  }
+
+  .liturgy-detail,
+  .service-value {
+    text-align: right;
   }
 
   .hero-marquee span {
