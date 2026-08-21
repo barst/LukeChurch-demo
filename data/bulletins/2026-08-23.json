@@ -16,10 +16,15 @@
     "speaker": "趙學智牧師"
   },
   "liveStream": {
-    "status": "待建立",
-    "description": "直播建立後將自動回填本週頁面。",
+    "url": "https://www.youtube.com/watch?v=kAsaH3G0IIw",
+    "watchUrl": "https://www.youtube.com/watch?v=kAsaH3G0IIw",
+    "videoId": "kAsaH3G0IIw",
+    "status": "直播連結已建立",
+    "description": "2026 年 8 月 23 日上午 9:30 主日禮拜直播。",
     "channelUrl": "https://www.youtube.com/@%E8%B7%AF%E5%8A%A0%E5%9F%BA%E7%9D%A3%E9%95%B7%E8%80%81%E6%95%99%E6%9C%83",
-    "streamsUrl": "https://www.youtube.com/@%E8%B7%AF%E5%8A%A0%E5%9F%BA%E7%9D%A3%E9%95%B7%E8%80%81%E6%95%99%E6%9C%83/streams"
+    "streamsUrl": "https://www.youtube.com/@%E8%B7%AF%E5%8A%A0%E5%9F%BA%E7%9D%A3%E9%95%B7%E8%80%81%E6%95%99%E6%9C%83/streams",
+    "source": "studio-video-id",
+    "matchedAt": "2026-08-22T03:33:42+08:00"
   },
   "weeklyVerse": {
     "reference": "尼希米記 8：10b (現代台語譯本、和合本)",
