@@ -1,0 +1,26 @@
+{
+  "schema": "lukechurch.weekly-livestream-publication.v1",
+  "operationId": "weekly-operation-575aadb37ad62f3c71c874705a9d0240",
+  "workflowId": "workflow_a428c9b4446d9f0c",
+  "planId": "weekly-plan-a957591a372d85e9b924c6a2adc743a2",
+  "revisionId": "weekly-revision-94cabb4e7a226927c7eb82f4a691dd9c",
+  "serviceDate": "2026-08-30",
+  "bulletinVersion": "V04",
+  "youtube": {
+    "videoId": "1BjXPrHTVpk",
+    "broadcastId": "1BjXPrHTVpk",
+    "watchUrl": "https://youtube.com/live/1BjXPrHTVpk?feature=share",
+    "scheduledStart": "2026-08-30T09:30:00+08:00",
+    "visibility": "public",
+    "channelId": "UCuld2VQfxPSnY8IBFzfAesg"
+  },
+  "thumbnail": {
+    "sha256": "95e16f48cf37a010a42bfa3493c529a64912401bdd78014445f9026d00bd9fac"
+  },
+  "source": {
+    "siteOperationId": "weekly-operation-fa1f9a47d80b764a4037bf84bdf427a6",
+    "priorPublicCommit": "ee4b668969eebce77a2f10698aaac60d05f381e8",
+    "youtubeReceiptSha256": "d4999baf490ef147ad9ca87a1df2d33f4359b4b1eca8b587f265f89124d07390"
+  },
+  "publishedAt": "2026-08-29T22:56:45+08:00"
+}
