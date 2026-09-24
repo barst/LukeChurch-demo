@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "stage": "public",
+  "operation_id": "weekly-operation-e925bfeca44543c7b5e65d1f98902acc",
+  "reservation_token": "weekly-pointer-reservation:226b339cd9b11ef5ac5ba325e229fac07be16c7441e6722034103eab939bb479",
+  "plan_id": "weekly-plan-aafd48b0958bbcd9e32be9bac8841aa0",
+  "plan_hash": "sha256:b30917afccb9af792b257d51b5630aefd4f5ff6e33ce2cfb1e63442234229d5a",
+  "revision_id": "weekly-revision-5a0f914e91efa50c2755d58f98ed9766",
+  "artifact_sha256": "sha256:da761c6a499d4ef4584b9e1e9f4847d1448b149e0a228c3fabb500249e1632a4",
+  "expected_path_hashes": {
+    "bulletins/2026-09-27.html": "sha256:5b7b2bb46007e76a670d140d0b6a89986ce1b8aa9991120dad6ddda1708be307",
+    "bulletins/index.html": "sha256:5589f64cef73a915c323899db3c84b33fe62de785f6b5445d3d9a53a31eb4cd0",
+    "data/bulletins/2026-09-27.json": "sha256:da761c6a499d4ef4584b9e1e9f4847d1448b149e0a228c3fabb500249e1632a4",
+    "weekly/index.html": "sha256:b2639240f34b8e24c0fbe6c2fbe93440c9660e8a9cc7bd6bc42cc0a405271a63"
+  }
+}
