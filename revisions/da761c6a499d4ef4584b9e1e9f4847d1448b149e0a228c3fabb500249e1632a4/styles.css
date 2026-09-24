@@ -1,0 +1,1772 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
+
+:root {
+  --bg: #ebe4da;
+  --bg-deep: #cfc4b4;
+  --paper: rgba(255, 252, 247, 0.98);
+  --paper-strong: #ffffff;
+  --ink: #0f0d0b;
+  --muted: #43392f;
+  --accent: #6d2414;
+  --accent-deep: #2e0f09;
+  --gold: #9c6f2f;
+  --line: rgba(15, 13, 11, 0.18);
+  --shadow: 0 18px 40px rgba(15, 13, 11, 0.08);
+  --radius-xl: 18px;
+  --radius-lg: 10px;
+  --radius-md: 6px;
+  --radius-sm: 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.12)),
+    linear-gradient(90deg, rgba(127, 47, 28, 0.03) 0, rgba(127, 47, 28, 0.03) 1px, transparent 1px, transparent 32px),
+    linear-gradient(180deg, #eee8df 0%, #e5ddd1 100%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+  background: rgba(157, 83, 29, 0.12);
+  font-size: 0.94em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Fraunces", "Noto Serif TC", serif;
+  font-size: clamp(2.3rem, 4vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-family: "Fraunces", "Noto Serif TC", serif;
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  font-family: "Fraunces", "Noto Serif TC", serif;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.page-shell {
+  width: min(1220px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 18px 0 64px;
+}
+
+.page-shell-home {
+  width: min(1360px, calc(100% - 32px));
+}
+
+.page-shell-tight {
+  width: min(1500px, calc(100% - 32px));
+}
+
+.bulletin-body .page-shell-tight {
+  width: min(1920px, calc(100% - 44px));
+}
+
+.site-hero,
+.section,
+.feature-card,
+.hero-visual-card,
+.bulletin-panel,
+.timeline-item,
+.flow-card {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.site-hero {
+  padding: 18px 22px 28px;
+  border-radius: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.12)),
+    linear-gradient(135deg, rgba(127, 47, 28, 0.05), rgba(183, 138, 67, 0.02));
+}
+
+.site-nav,
+.site-nav-links,
+.hero-stage,
+.action-row,
+.hero-marquee,
+.section-heading,
+.split-heading,
+.feature-grid,
+.give-layout,
+.activity-showcase,
+.activity-grid,
+.timeline,
+.flow-grid,
+.bulletin-layout,
+.panel-head,
+.footer-links {
+  display: flex;
+}
+
+.site-nav {
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 4px 0 18px;
+  border-bottom: 3px solid var(--ink);
+}
+
+.site-brand,
+.site-nav-links,
+.site-nav-links a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-brand {
+  gap: 14px;
+  min-width: 0;
+}
+
+.site-brand strong {
+  display: block;
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.brand-mark {
+  width: 58px;
+  height: 58px;
+  border-radius: 0;
+  object-fit: cover;
+  border: 1px solid var(--ink);
+}
+
+.site-nav-links {
+  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+
+.site-nav-links a {
+  min-height: 40px;
+  font-size: 0.83rem;
+  color: var(--accent-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.site-nav-links a:hover,
+.site-nav-links a:focus-visible,
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--accent);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent-deep);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hero-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 28px;
+  margin-top: 28px;
+  align-items: start;
+}
+
+.hero-copy {
+  padding: 12px 8px 12px 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+}
+
+.hero-copy-home .lead {
+  max-width: 640px;
+}
+
+.lead {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.92;
+  max-width: 62ch;
+}
+
+.compact-lead {
+  max-width: 680px;
+}
+
+.action-row {
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 0;
+  background: var(--accent);
+  color: #fffaf2;
+  border: 1px solid var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.button-ghost {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--accent-deep);
+  border-color: var(--ink);
+}
+
+.hero-visual-card {
+  overflow: hidden;
+  border-radius: 0;
+  display: grid;
+  background: #12100d;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  object-fit: cover;
+}
+
+.hero-visual-copy {
+  padding: 18px 22px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(180deg, rgba(17, 15, 12, 0.96), rgba(17, 15, 12, 0.84));
+  color: #f8f2ea;
+}
+
+.card-label,
+.card-sub,
+.bulletin-date,
+.panel-tag,
+.panel-text,
+.info-value,
+.service-value,
+.notice-item p,
+.media-meta {
+  color: var(--muted);
+}
+
+.hero-visual-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.hero-visual-links a {
+  padding: 14px 16px;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f8f2ea;
+  font-weight: 700;
+}
+
+.hero-marquee {
+  gap: 0;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.hero-marquee span {
+  padding: 12px 14px;
+  border-right: 1px solid var(--line);
+  background: transparent;
+  color: var(--accent-deep);
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section {
+  margin-top: 28px;
+  padding: 38px 28px;
+  border-radius: 0;
+  border-top: 5px solid var(--ink);
+}
+
+.section-contrast {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(246, 240, 232, 0.94));
+}
+
+.section-heading {
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.split-heading {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.feature-grid,
+.give-layout,
+.activity-grid,
+.flow-grid {
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.feature-card,
+.flow-card,
+.activity-card,
+.activity-hero-card {
+  flex: 1 1 260px;
+  padding: 24px;
+  border-radius: 0;
+}
+
+.about-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-card h3,
+.media-card h3,
+.news-card h3,
+.give-card h3 {
+  margin-top: 10px;
+}
+
+.feature-card p,
+.timeline-item p,
+.flow-card p,
+.panel-text,
+.notice-item p,
+.info-value,
+.service-value {
+  margin-top: 10px;
+  line-height: 1.82;
+}
+
+.feature-card,
+.bulletin-panel,
+.flow-card,
+.timeline-item,
+.section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 242, 234, 0.96));
+}
+
+.vision-stage {
+  margin-top: 24px;
+  overflow: hidden;
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(222, 214, 201, 0.62));
+  border: 1px solid rgba(157, 83, 29, 0.12);
+}
+
+.vision-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.media-grid {
+  align-items: stretch;
+}
+
+.media-card-live {
+  background:
+    linear-gradient(135deg, rgba(127, 47, 28, 0.10), transparent 42%),
+    var(--paper-strong);
+}
+
+.media-card-podcast {
+  background:
+    linear-gradient(135deg, rgba(183, 138, 67, 0.14), transparent 36%),
+    var(--paper-strong);
+}
+
+.give-layout {
+  align-items: stretch;
+}
+
+.give-card {
+  flex: 1 1 320px;
+}
+
+.site-footer {
+  margin-top: 30px;
+  padding: 24px 18px 8px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer-links {
+  gap: 18px;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.timeline {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.timeline-item {
+  gap: 18px;
+  align-items: flex-start;
+  padding: 20px 22px;
+  border-radius: var(--radius-md);
+}
+
+.timeline-index,
+.flow-card span {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(157, 83, 29, 0.14);
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.qr-flow {
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0.92), rgba(245, 232, 217, 0.92));
+  border: 1px solid var(--line);
+}
+
+.bulletin-body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(137, 85, 46, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.35)),
+    linear-gradient(180deg, #f4ede3 0%, #e9dfd1 100%);
+}
+
+.bulletin-header {
+  position: relative;
+  padding: 18px 0 24px;
+  text-align: left;
+  border-bottom: 1px solid rgba(46, 15, 9, 0.18);
+}
+
+.bulletin-header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-deep), rgba(156, 111, 47, 0.35) 58%, transparent);
+}
+
+.bulletin-header h1 {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(2.8rem, 6.2vw, 7rem);
+  line-height: 0.96;
+  text-wrap: balance;
+}
+
+.bulletin-header .bulletin-date {
+  margin-top: 10px;
+}
+
+.bulletin-hero {
+  display: block;
+}
+
+.bulletin-hero-copy {
+  padding: 10px 0 0;
+}
+
+.bulletin-lead {
+  max-width: none;
+  margin-top: 18px;
+  color: #564636;
+  font-size: clamp(1.04rem, 1.2vw, 1.16rem);
+  line-height: 1.9;
+}
+
+.bulletin-meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.bulletin-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(46, 15, 9, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 252, 247, 0.9);
+  color: #473828;
+  box-shadow: 0 10px 20px rgba(15, 13, 11, 0.05);
+}
+
+.bulletin-meta-pill strong {
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bulletin-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.bulletin-summary-card {
+  display: block;
+  position: relative;
+  padding: 18px 20px;
+  border: 1px solid rgba(46, 15, 9, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 252, 248, 0.84);
+  box-shadow: 0 14px 28px rgba(15, 13, 11, 0.04);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.bulletin-summary-card:hover,
+.bulletin-summary-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(137, 85, 46, 0.32);
+  box-shadow: 0 16px 30px rgba(56, 29, 12, 0.1);
+}
+
+.bulletin-summary-card::after {
+  content: "›";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(86, 70, 54, 0.56);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.bulletin-summary-label {
+  color: #705a46;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bulletin-summary-value {
+  margin-top: 8px;
+  color: var(--accent-deep);
+  font-family: "Fraunces", "Noto Serif TC", serif;
+  font-size: clamp(1.2rem, 1.5vw, 1.55rem);
+  line-height: 1.2;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.bulletin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
+  gap: 24px;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+.bulletin-primary {
+  display: grid;
+  gap: 20px;
+}
+
+.bulletin-sidebar {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  position: sticky;
+  top: 20px;
+}
+
+.bulletin-panel {
+  padding: 24px;
+  border-radius: 22px;
+  border: 1px solid rgba(46, 15, 9, 0.09);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 245, 238, 0.96));
+  box-shadow: 0 20px 32px rgba(25, 21, 18, 0.06);
+}
+
+.panel-anchor {
+  display: block;
+  position: relative;
+  top: -18px;
+  visibility: hidden;
+}
+
+.bulletin-primary > .bulletin-panel {
+  position: relative;
+}
+
+.bulletin-primary > .bulletin-panel::before,
+.bulletin-sidebar > .bulletin-panel::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 42px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), rgba(156, 111, 47, 0.25));
+}
+
+.panel-head {
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.panel-tag {
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(46, 15, 9, 0.12);
+  background: rgba(109, 36, 20, 0.07);
+  font-size: 0.77rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sermon-scripture {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #5d4a37;
+}
+
+.verse-reference,
+.excerpt-meta {
+  margin-bottom: 14px;
+}
+
+.verse-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.verse-card {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(46, 15, 9, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.verse-card h3 {
+  color: var(--accent-deep);
+}
+
+.verse-card .panel-text {
+  margin-top: 8px;
+}
+
+.excerpt-quote {
+  padding: 16px 18px;
+  border-left: 4px solid rgba(127, 47, 28, 0.75);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--accent-deep);
+  font-weight: 700;
+  line-height: 1.85;
+}
+
+.liturgy-list,
+.stack-list {
+  display: grid;
+  gap: 12px;
+}
+
+.liturgy-list {
+  counter-reset: liturgy;
+}
+
+.liturgy-item {
+  position: relative;
+  padding: 12px 0 12px 58px;
+  border-top: 1px solid rgba(46, 15, 9, 0.08);
+}
+
+.liturgy-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.liturgy-item::before {
+  counter-increment: liturgy;
+  content: counter(liturgy, decimal-leading-zero);
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(109, 36, 20, 0.08);
+  color: var(--accent-deep);
+  font-family: "Fraunces", "Noto Serif TC", serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.liturgy-item:first-child::before {
+  top: 0;
+}
+
+.liturgy-line {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 12px;
+  text-align: left;
+}
+
+.liturgy-step {
+  font-size: clamp(1.02rem, 1.35vw, 1.2rem);
+  font-weight: 700;
+  color: var(--accent-deep);
+}
+
+.liturgy-detail {
+  color: #5c4b37;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.next-week-worship {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 3px solid rgba(109, 36, 20, 0.78);
+}
+
+.next-week-worship h3 {
+  color: var(--accent-deep);
+  font-size: clamp(1.08rem, 1.45vw, 1.22rem);
+}
+
+.next-week-worship-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 10px;
+}
+
+.next-week-worship-list p {
+  margin: 0;
+  color: #5c4b37;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.next-week-worship-list p:not(:last-child)::after {
+  content: "/";
+  margin-left: 14px;
+  color: rgba(109, 36, 20, 0.55);
+}
+
+.next-week-worship-list span {
+  color: var(--accent-deep);
+  font-weight: 800;
+}
+
+.next-week-worship-list strong {
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+.notice-item {
+  padding: 18px 18px 18px 20px;
+  border-top: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(46, 15, 9, 0.08);
+  box-shadow: inset 4px 0 0 rgba(109, 36, 20, 0.18);
+}
+
+.notice-item:first-child {
+  padding-top: 0;
+}
+
+.stack-list .notice-item:first-child {
+  padding-top: 18px;
+}
+
+.notice-item h3 {
+  font-size: 1.08rem;
+  color: var(--accent-deep);
+}
+
+.info-list,
+.service-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.info-row,
+.service-row {
+  display: grid;
+  gap: 4px 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(46, 15, 9, 0.08);
+}
+
+.info-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+}
+
+.service-grid {
+  grid-template-columns: 1fr;
+}
+
+.info-term,
+.service-term {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.service-row {
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 8px 12px;
+  padding: 10px 12px;
+}
+
+.service-term {
+  white-space: nowrap;
+}
+
+.service-value {
+  margin-top: 0;
+  text-align: right;
+  line-height: 1.45;
+}
+
+.info-term {
+  margin-right: 10px;
+}
+
+.info-value {
+  margin-top: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.livestream-panel {
+  background:
+    radial-gradient(circle at top right, rgba(209, 57, 57, 0.16), transparent 24%),
+    linear-gradient(135deg, rgba(109, 36, 20, 0.16), rgba(255, 255, 255, 0) 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 238, 228, 0.98));
+}
+
+.livestream-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.livestream-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(157, 83, 29, 0.18);
+  background: #1d140f;
+  color: #fff9f1;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.livestream-card:hover,
+.livestream-card:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(15, 13, 11, 0.24);
+}
+
+.livestream-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.livestream-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.68));
+  pointer-events: none;
+}
+
+.livestream-card-badge,
+.livestream-card-copy,
+.livestream-play-badge {
+  position: absolute;
+  z-index: 1;
+}
+
+.livestream-card-badge {
+  top: 14px;
+  left: 14px;
+  padding: 7px 11px;
+  border-radius: 0;
+  background: rgba(179, 27, 27, 0.92);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.livestream-card-copy {
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  display: grid;
+  gap: 4px;
+}
+
+.livestream-card-copy strong {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: #fffdf8;
+}
+
+.livestream-card-copy span {
+  color: rgba(255, 247, 236, 0.9);
+  line-height: 1.55;
+}
+
+.livestream-play-badge {
+  top: 14px;
+  right: 14px;
+  padding: 8px 12px;
+  border-radius: 0;
+  background: rgba(255, 248, 236, 0.92);
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.livestream-player-shell {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(157, 83, 29, 0.18);
+  background: #140d08;
+}
+
+.livestream-player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.livestream-actions {
+  margin-top: 0;
+}
+
+.livestream-fullscreen-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.bulletin-action-row {
+  margin-top: 18px;
+}
+
+.livestream-status {
+  margin-top: 16px;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes rayGlow {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes riseFade {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .site-nav,
+  .split-heading,
+  .bulletin-layout {
+    flex-direction: column;
+  }
+
+  .hero-stage,
+  .bulletin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav {
+    align-items: stretch;
+  }
+
+  .bulletin-sidebar {
+    position: static;
+  }
+
+  .site-nav-links {
+    justify-content: flex-start;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy,
+  .hero-visual-card,
+  .bulletin-primary,
+  .bulletin-sidebar {
+    width: 100%;
+  }
+
+  .liturgy-line {
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .page-shell,
+  .page-shell-home {
+    width: min(100%, calc(100% - 16px));
+    padding-top: 8px;
+    padding-bottom: 38px;
+  }
+
+  .site-hero,
+  .section {
+    padding: 18px 14px;
+    border-radius: 0;
+  }
+
+  .site-nav-links {
+    gap: 10px 14px;
+  }
+
+  .hero-copy {
+    padding: 8px 0;
+  }
+
+  .hero-image {
+    min-height: 320px;
+  }
+
+  .feature-card,
+  .bulletin-panel,
+  .flow-card,
+  .activity-card,
+  .activity-hero-card {
+    padding: 18px;
+  }
+
+  .bulletin-summary-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .bulletin-summary-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+    align-items: center;
+    min-height: 0;
+    padding: 14px 38px 14px 14px;
+  }
+
+  .bulletin-summary-label,
+  .bulletin-summary-value {
+    margin: 0;
+  }
+
+  .bulletin-summary-card::after {
+    right: 14px;
+    font-size: 1.05rem;
+  }
+
+  .bulletin-meta-pills {
+    gap: 8px;
+  }
+
+  .bulletin-meta-pill {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .verse-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .info-value {
+    text-align: left;
+  }
+
+  .liturgy-item {
+    padding: 12px 0 12px 48px;
+  }
+
+  .liturgy-line {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 8px;
+    text-align: left;
+  }
+
+  .liturgy-item::before {
+    width: 34px;
+    height: 34px;
+    top: 10px;
+    font-size: 0.8rem;
+  }
+
+  .liturgy-detail,
+  .service-value {
+    text-align: right;
+  }
+
+  .hero-marquee span {
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .bulletin-summary-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Tithe.ly-like bulletin direction. Keep this block last so weekly pages use the adopted DESIGN.md. */
+.bulletin-body {
+  --bg: #ffffff;
+  --paper: #ffffff;
+  --paper-strong: #ffffff;
+  --ink: #0d253d;
+  --muted: #64748d;
+  --accent: #533afd;
+  --accent-deep: #4434d4;
+  --gold: #ffb55b;
+  --line: #e3e8ee;
+  --shadow: 0 18px 54px rgba(0, 55, 112, 0.10);
+  min-height: 100vh;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.bulletin-body h1,
+.bulletin-body h2,
+.bulletin-body h3 {
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.055em;
+}
+
+.bulletin-body .page-shell-tight {
+  width: min(1180px, calc(100% - 32px));
+}
+
+.bulletin-mesh {
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  padding: 22px 0 96px;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(255, 181, 91, 0.56), transparent 16rem),
+    radial-gradient(circle at 48% 3%, rgba(185, 185, 249, 0.72), transparent 19rem),
+    radial-gradient(circle at 86% 15%, rgba(234, 34, 97, 0.34), transparent 18rem),
+    linear-gradient(110deg, #fff8e9 0%, #f1e7ff 46%, #e6ecff 100%);
+}
+
+.bulletin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 54px rgba(0, 55, 112, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.bulletin-brand {
+  color: var(--ink);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.bulletin-top-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bulletin-body .button {
+  min-height: 40px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border-color: transparent;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.bulletin-body .button-ghost {
+  border-color: rgba(83, 58, 253, 0.24);
+  background: #ffffff;
+  color: var(--accent);
+}
+
+.bulletin-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: 34px;
+  align-items: center;
+  padding: 72px 0 0;
+}
+
+.bulletin-hero-copy .eyebrow {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(83, 58, 253, 0.13);
+  color: var(--accent-deep);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.bulletin-header h1,
+.bulletin-hero-copy h1 {
+  max-width: 820px;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(3.2rem, 7vw, 5.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.09em;
+  text-wrap: balance;
+}
+
+.bulletin-date {
+  margin-top: 18px;
+  color: var(--accent-deep);
+  font-weight: 800;
+}
+
+.bulletin-lead {
+  max-width: 680px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.35vw, 1.14rem);
+  line-height: 1.72;
+}
+
+.bulletin-meta-pills {
+  margin-top: 26px;
+}
+
+.bulletin-meta-pill {
+  border-color: rgba(83, 58, 253, 0.16);
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--ink);
+  box-shadow: 0 8px 22px rgba(0, 55, 112, 0.08);
+}
+
+.bulletin-meta-pill strong {
+  color: var(--accent);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.bulletin-phone-card {
+  padding: 18px;
+  border-radius: 34px;
+  background: #1c1e54;
+  color: #ffffff;
+  box-shadow: 0 30px 80px rgba(28, 30, 84, 0.28);
+  transform: rotate(2deg);
+}
+
+.bulletin-phone-screen {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 500px;
+  padding: 18px;
+  border-radius: 24px;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.bulletin-phone-visual {
+  display: flex;
+  align-items: end;
+  min-height: 160px;
+  padding: 24px;
+  border-radius: 20px;
+  background:
+    linear-gradient(160deg, rgba(13, 37, 61, 0.20), rgba(13, 37, 61, 0.72)),
+    radial-gradient(circle at 70% 16%, rgba(255, 213, 115, 0.86), transparent 9rem),
+    linear-gradient(140deg, #4c7a54, #d9b35d);
+  color: #ffffff;
+}
+
+.bulletin-phone-visual strong {
+  max-width: 9em;
+  font-size: clamp(1.55rem, 2.2vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.bulletin-phone-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #f6f9fc;
+  color: var(--muted);
+}
+
+.bulletin-phone-row strong {
+  color: var(--accent);
+  text-align: right;
+}
+
+.bulletin-phone-link {
+  text-decoration: none;
+}
+
+.bulletin-content-shell {
+  position: relative;
+  z-index: 1;
+  margin-top: -52px;
+  padding-bottom: 80px;
+}
+
+.bulletin-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+.bulletin-summary-card {
+  min-height: 132px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 12px 36px rgba(0, 55, 112, 0.08);
+}
+
+.bulletin-summary-card::after {
+  display: none;
+}
+
+.bulletin-summary-label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.bulletin-summary-value {
+  margin-top: 26px;
+  color: var(--ink);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  font-size: clamp(1.7rem, 2.4vw, 2rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+.bulletin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 18px;
+  margin-top: 0;
+}
+
+.bulletin-primary,
+.bulletin-sidebar {
+  gap: 18px;
+}
+
+.bulletin-panel {
+  position: relative;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(0, 55, 112, 0.06);
+}
+
+.bulletin-primary > .bulletin-panel::before,
+.bulletin-sidebar > .bulletin-panel::before,
+.bulletin-header::after {
+  display: none;
+}
+
+.bulletin-panel h2 {
+  color: var(--ink);
+  font-size: clamp(1.9rem, 2.6vw, 2.35rem);
+}
+
+.panel-head {
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.panel-tag {
+  border-color: rgba(83, 58, 253, 0.18);
+  background: rgba(83, 58, 253, 0.08);
+  color: var(--accent);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.liturgy-list {
+  display: grid;
+  gap: 0;
+  counter-reset: none;
+}
+
+.liturgy-item {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.liturgy-item:first-child {
+  padding-top: 0;
+}
+
+.liturgy-item:last-child {
+  border-bottom: 0;
+}
+
+.liturgy-item::before {
+  display: none;
+}
+
+.liturgy-number {
+  color: var(--accent);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+
+.liturgy-line {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 14px;
+  align-items: baseline;
+}
+
+.liturgy-step {
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.liturgy-detail {
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.notice-item,
+.info-row,
+.service-row,
+.verse-card {
+  border: 0;
+  border-radius: 14px;
+  background: #f6f9fc;
+  box-shadow: none;
+}
+
+.notice-item {
+  padding: 14px;
+}
+
+.notice-item:first-child,
+.stack-list .notice-item:first-child {
+  padding-top: 14px;
+}
+
+.notice-item h3,
+.info-term,
+.service-term,
+.verse-card h3 {
+  color: var(--ink);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.notice-item p,
+.panel-text,
+.info-value,
+.service-value,
+.card-label {
+  color: var(--muted);
+}
+
+#bulletin-prayers,
+.bulletin-panel:has(#bulletin-prayers) {
+  background: #f5e9d4;
+}
+
+.excerpt-quote {
+  border-left-color: var(--accent);
+  background: #f6f9fc;
+  color: var(--ink);
+}
+
+.next-week-worship {
+  border-top-color: rgba(83, 58, 253, 0.55);
+}
+
+.next-week-worship h3,
+.next-week-worship-list span {
+  color: var(--accent);
+}
+
+.service-row {
+  grid-template-columns: 96px minmax(0, 1fr);
+  padding: 11px 14px;
+}
+
+.service-value {
+  line-height: 1.45;
+}
+
+.info-row {
+  padding: 11px 14px;
+}
+
+.livestream-panel {
+  background:
+    radial-gradient(circle at 80% 10%, rgba(234, 34, 97, 0.13), transparent 14rem),
+    #ffffff;
+}
+
+.livestream-card,
+.livestream-player-shell {
+  border-color: var(--line);
+  border-radius: 18px;
+}
+
+.livestream-card-badge,
+.livestream-play-badge {
+  border-radius: 999px;
+}
+
+@media (max-width: 980px) {
+  .bulletin-mesh {
+    min-height: auto;
+    padding-bottom: 38px;
+  }
+
+  .bulletin-topbar,
+  .bulletin-hero,
+  .bulletin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bulletin-hero {
+    padding-top: 42px;
+  }
+
+  .bulletin-phone-card {
+    transform: none;
+  }
+
+  .bulletin-content-shell {
+    margin-top: 18px;
+  }
+
+  .bulletin-summary-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bulletin-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 620px) {
+  .bulletin-body .page-shell-tight {
+    width: min(100% - 22px, 1180px);
+  }
+
+  .bulletin-topbar {
+    align-items: flex-start;
+    border-radius: 22px;
+  }
+
+  .bulletin-top-actions {
+    display: none;
+  }
+
+  .bulletin-hero-copy h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .bulletin-phone-screen {
+    min-height: 0;
+  }
+
+  .bulletin-summary-strip {
+    gap: 8px;
+  }
+
+  .bulletin-summary-card {
+    min-height: 98px;
+    padding: 14px;
+  }
+
+  .bulletin-summary-value {
+    margin-top: 14px;
+    font-size: 1.5rem;
+  }
+
+  .bulletin-panel {
+    padding: 22px;
+  }
+
+  .liturgy-item {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .liturgy-line {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .liturgy-detail {
+    font-size: 0.92rem;
+  }
+
+  .service-row {
+    grid-template-columns: 82px minmax(0, 1fr);
+  }
+}
